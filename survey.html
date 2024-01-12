@@ -1,29 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link href="survey.css" rel="stylesheet" type="text/css" />
-    <title>Questionnaire</title>
-  </head>
 
-  <body>
-    <h1>Walmart Website Survey</h1>
-	<form id="myform" action="index.php" >
-	<br>
-	<br>
+<head>
+  <meta charset="utf-8" />
+  <link href="survey.css" rel="stylesheet" type="text/css" />
+  <title>Walmart Survey</title>
+</head>
+
+<body>
+  <h1>Walmart Website Survey</h1>
+  <form id="myform" action="index.php">
     <h2>What do you think of <a href="https://www.walmart.ca">Walmart</a> site?</h2>
-    <br>
-	<br>
-    <div class="question">
-        <h2> Please provide your personal information </h2>
-        <p>First name: <input type="text" name="firstname"></p>
-        <p>Last name: <input type="text" name="lastname"></p>
-        <br>
-        <br>
+    <div class="image-container">
+      <img alt="walmart website" src="images/walmart1.png" width="50%">
     </div>
-  </body>
+    <br>
+    <div class="info-question">
+      <h2>Personal information </h2>
+      <p>First name: <input type="text" name="firstname"></p>
+      <p>Last name: <input type="text" name="lastname"></p>
+      <p>
+        In which Canadian province do you live in:
+        <select name="province" id="province">
+          <option disabled selected>Select province</option>
+          <option value="AB">Alberta</option>
+          <option value="BC">British Columbia</option>
+          <option value="MB">Manitoba</option>
+          <option value="NB">New Brunswick</option>
+          <option value="NL">Newfoundland and Labrador</option>
+          <option value="NS">Nova Scotia</option>
+          <option value="NT">Northwest Territories</option>
+          <option value="NU">Nunavut</option>
+          <option value="ON">Ontario</option>
+          <option value="PE">Prince Edward Island</option>
+          <option value="QC">Quebec</option>
+          <option value="SK">Saskatchewan</option>
+          <option value="YT">Yukon</option>
+        </select>
+      </p>
+    </div>
+    <div class="ui-question">
+      <h2>Please give us your opinions on Walmart's user interface by answering the following questions:</h2>
+      <p>On a scale of 1 to 5, please rate the usability of the website: </p>
+      <div style="display: flex; flex-direction: row">
+        <div class="radio-btn-container">
+          <input class="radio-btn" type="radio" id="one" name="rating" value="1">
+          <label class="label-btn" for="one">1</label>
+        </div>
+        <div class="radio-btn-container">
+          <input class="radio-btn" type="radio" id="two" name="rating" value="2">
+          <label class="label-btn" for="two">2</label>
+        </div>
+        <div class="radio-btn-container">
+          <input class="radio-btn" type="radio" id="three" name="rating" value="3">
+          <label class="label-btn" for="three">3</label>
+        </div>
+        <div class="radio-btn-container">
+          <input class="radio-btn" type="radio" id="four" name="rating" value="4">
+          <label class="label-btn" for="four">4</label>
+        </div>
+        <div class="radio-btn-container">
+          <input class="radio-btn" type="radio" id="five" name="rating" value="5">
+          <label class="label-btn" for="five">5</label>
+        </div>
+      </div>
+    </div>
+    <br>
+    <button id="submitButton" type="button" class="block">
+      SUBMIT
+    </button>
+</body>
 
-  <button id="submitButton" type="button" class="block">
-    SUBMIT
-  </button>
 </html>
