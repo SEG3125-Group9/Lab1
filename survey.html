@@ -16,11 +16,11 @@
     </div>
     <br>
     <div class="info-question">
-      <h2>Personal information </h2>
-      <p>First name: <input type="text" name="firstname"></p>
-      <p>Last name: <input type="text" name="lastname"></p>
+      <h2>A. Personal information </h2>
+      <p> 1. First name: <input type="text" name="firstname"></p>
+      <p> 2. Last name: <input type="text" name="lastname"></p>
       <p>
-        In which Canadian province do you live in:
+        3. In which Canadian province do you live in:
         <select name="province" id="province">
           <option disabled selected>Select province</option>
           <option value="AB">Alberta</option>
@@ -40,8 +40,8 @@
       </p>
     </div>
     <div class="ui-question">
-      <h2>Please give us your opinions on Walmart's user interface by answering the following questions:</h2>
-      <p>On a scale of 1 to 5, please rate the usability of the website: </p>
+      <h2>B. Please give us your opinions on Walmart's user interface by answering the following questions:</h2>
+      <p>1. On a scale of 1 to 5, please rate the usability of the website: </p>
       <div style="display: flex; flex-direction: row">
         <div class="radio-btn-container">
           <input class="radio-btn" type="radio" id="one" name="rating" value="1">
@@ -64,8 +64,39 @@
           <label class="label-btn" for="five">5</label>
         </div>
       </div>
+      <p> 2. Among these features, which ones do you use the most? </p>
+        <input type="checkbox" value="Sort and filter">
+        <label for="vehicle1"> Sort and filter </label><br>
+        <input type="checkbox" value="Flyers">
+        <label for="vehicle2"> Flyers </label><br>
+        <input type="checkbox" value="Store Finder">
+        <label for="vehicle3"> Store Finder </label><br>
+        <input type="checkbox" value="Digital Services">
+        <label for="vehicle3"> Digital Services </label><br>
+        <input type="checkbox" value="Trending in your area">
+        <label for="vehicle3"> Trending in your area </label><br>
+      </p>
+
+      <p> 3. What do you shop for the most? </p>
+        <input type="checkbox" value="Fruits and Vegetables">
+        <label for="vehicle1"> Fruits and vegetables </label><br>
+        <input type="checkbox" value="Dairy and Eggs">
+        <label for="vehicle2"> Dairy and Eggs </label><br>
+        <input type="checkbox" value="Bread and Bakery">
+        <label for="vehicle3"> Bread and Bakery </label><br>
+        <input type="checkbox" value="Meat and Seafood">
+        <label for="vehicle3"> Meat and Seafood </label><br>
+        <input type="checkbox" value="Chips and Snacks">
+        <label for="vehicle3"> Chips and Snacks </label><br>
+        <input type="checkbox" value="Medicine and Drugs">
+        <label for="vehicle3"> Medicine and Drugs </label><br>
+        <input type="checkbox" value="Others">
+        <label for="vehicle3"> Others </label><br>
+      </p>
+
     </div>
     <br>
+    <div></div>
     <button id="submitButton" type="button" class="block">
       SUBMIT
     </button>
