@@ -103,7 +103,12 @@ h2 {
 #submitButton:hover {
   background-color: #cccccc;
 }
-
+input[type="checkbox"] {
+  accent-color:  red;
+}
+input[type="radio"] {
+  accent-color:  red;
+}
 .block {
   display: block;
   margin-top: 20px;
