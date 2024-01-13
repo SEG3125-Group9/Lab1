@@ -67,6 +67,7 @@ h2 {
 
 .radio-btn:hover {
   transform: scale(1.4);
+  cursor: pointer;
 }
 
 .selection-btn {
