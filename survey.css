@@ -58,6 +58,19 @@ h2 {
 .radio-btn {
   width: 20px;
   height: 20px;
+  transition: transform 0.3s ease; 
+}
+
+.radio-btn:hover {
+  transform: scale(1.4); 
+}
+
+.selection-btn{
+  transition: transform 0.3s ease; 
+}
+
+.selection-btn:hover {
+  transform: scale(1.4); 
 }
 
 .label-btn {
