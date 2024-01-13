@@ -20,28 +20,48 @@
     <hr>
     <div class="info-question">
       <h2>A. Personal information </h2>
-      <p> 1. First name: <input type="text" name="firstname"></p>
-      <p> 2. Last name: <input type="text" name="lastname"></p>
-      <p>
-        3. In which Canadian province do you live in:
-        <select name="province" id="province">
-          <option disabled selected>Select province</option>
-          <option value="AB">Alberta</option>
-          <option value="BC">British Columbia</option>
-          <option value="MB">Manitoba</option>
-          <option value="NB">New Brunswick</option>
-          <option value="NL">Newfoundland and Labrador</option>
-          <option value="NS">Nova Scotia</option>
-          <option value="NT">Northwest Territories</option>
-          <option value="NU">Nunavut</option>
-          <option value="ON">Ontario</option>
-          <option value="PE">Prince Edward Island</option>
-          <option value="QC">Quebec</option>
-          <option value="SK">Saskatchewan</option>
-          <option value="YT">Yukon</option>
-        </select>
-      </p>
+      <div class="text-container">
+        <div class="label-container">
+           <label for="fname">1. First name: </label>
+        </div>
+       <div class="box-container">
+         <input style="width:100%" type="text" id="fname" name="fname"><br><br>
+       </div>
+      </div>
+      <div class="text-container">
+       <div class="label-container">
+          <label for="lname">1. Last name: </label>
+        </div>
+        <div class="box-container">
+          <input style="width:100%" type="text" id="lname" name="lname"><br><br>
+        </div>
+      </div>
+      <div class="text-container">
+        <div class="label-container">
+          <p style="margin: 0px">3. In which Canadian province do you live in:</p>
+        </div>
+        <div class="province-container" style="align-content: center;">
+          <select name="province" id="province">
+            <option disabled selected>Select province</option>
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NL">Newfoundland and Labrador</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NU">Nunavut</option>
+            <option value="ON">Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="YT">Yukon</option>
+          </select>
+        </div>
+      </div>
     </div>
+    <br>
+
     <hr>
     <div class="ui-question">
       <h2>B. Please give us your opinions on Walmart's user interface by answering the following questions:</h2>
