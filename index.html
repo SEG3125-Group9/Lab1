@@ -4,155 +4,207 @@
 <head>
   <meta charset="utf-8" />
   <link href="survey.css" rel="stylesheet" type="text/css" />
-  <script src="script.js"></script>
+  <script src="scripts/submit.js"></script>
   <title>Walmart Survey</title>
 </head>
 
 <body>
   <h1>Walmart Website Survey</h1>
   <hr>
-  <form id="myform" action="index.php">
-    <h2>What do you think of the <a href="https://www.walmart.ca">Walmart</a> site?</h2>
-    <div class="image-container">
-      <img alt="walmart website" src="images/walmart1.png" width="80%">
+  <h2>What do you think of the <a target="_blank" href="https://www.walmart.ca">Walmart</a> site?</h2>
+  <div class="slideshow-container">
+    <div class="mySlides fade" target="_blank">
+      <a href="https://www.walmart.ca" target="_blank">
+        <img src="images/walmart1.png" style="width:100%">
+      </a>
     </div>
-    <br>
-    <hr>
-    <div class="info-question">
-      <h2>A. Personal information </h2>
-      <div class="text-container">
-        <div class="label-container">
-           <label for="fname">1. First name: </label>
-        </div>
-       <div class="box-container">
-         <input style="width:100%" type="text" id="fname" name="fname"><br><br>
-       </div>
+    <div class="mySlides fade">
+      <a href="https://www.walmart.ca" target="_blank">
+        <img src="images/walmart2.png" style="width:100%">
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://www.walmart.ca" target="_blank">
+        <img src="images/walmart3.png" style="width:100%">
+      </a>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <br>
+  <hr>
+  <div class="info-question">
+    <h2>A. Personal information </h2>
+    <div class="text-container">
+      <div class="label-container">
+        <label for="fname">1. First name: </label>
       </div>
-      <div class="text-container">
-       <div class="label-container">
-          <label for="lname">1. Last name: </label>
-        </div>
-        <div class="box-container">
-          <input style="width:100%" type="text" id="lname" name="lname"><br><br>
-        </div>
-      </div>
-      <div class="text-container">
-        <div class="label-container">
-          <p style="margin: 0px">3. In which Canadian province do you live in:</p>
-        </div>
-        <div class="province-container" style="align-content: center;">
-          <select name="province" id="province">
-            <option disabled selected>Select province</option>
-            <option value="AB">Alberta</option>
-            <option value="BC">British Columbia</option>
-            <option value="MB">Manitoba</option>
-            <option value="NB">New Brunswick</option>
-            <option value="NL">Newfoundland and Labrador</option>
-            <option value="NS">Nova Scotia</option>
-            <option value="NT">Northwest Territories</option>
-            <option value="NU">Nunavut</option>
-            <option value="ON">Ontario</option>
-            <option value="PE">Prince Edward Island</option>
-            <option value="QC">Quebec</option>
-            <option value="SK">Saskatchewan</option>
-            <option value="YT">Yukon</option>
-          </select>
-        </div>
+      <div class="box-container">
+        <input style="width:100%; font-size: 18px;" type="text" id="fname" name="fname"><br><br>
       </div>
     </div>
-    <br>
+    <div class="text-container">
+      <div class="label-container">
+        <label for="lname">2. Last name: </label>
+      </div>
+      <div class="box-container">
+        <input style="width:100%; font-size: 18px;" type="text" id="lname" name="lname"><br><br>
+      </div>
+    </div>
+    <div class="text-container">
+      <div class="label-container">
+        <p style="margin: 0px">3. In which Canadian province do you live in:</p>
+      </div>
+      <div class="province-container" style="align-content: center;">
+        <select name="province" id="province" style="font-size: 18px;">
+          <option disabled selected>Select province</option>
+          <option value="AB">Alberta</option>
+          <option value="BC">British Columbia</option>
+          <option value="MB">Manitoba</option>
+          <option value="NB">New Brunswick</option>
+          <option value="NL">Newfoundland and Labrador</option>
+          <option value="NS">Nova Scotia</option>
+          <option value="NT">Northwest Territories</option>
+          <option value="NU">Nunavut</option>
+          <option value="ON">Ontario</option>
+          <option value="PE">Prince Edward Island</option>
+          <option value="QC">Quebec</option>
+          <option value="SK">Saskatchewan</option>
+          <option value="YT">Yukon</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <br>
 
-    <hr>
-    <div class="ui-question">
-      <h2>B. Please give us your opinions on Walmart's user interface by answering the following questions:</h2>
-      <p>1. On a scale of 1 to 5, please rate the usability of the website: </p>
-      <div style="display: flex; flex-direction: row">
-        <div class="radio-btn-container">
-          <input class="radio-btn" type="radio" id="one" name="rating" value="1">
-          <label class="label-btn" for="one">1</label>
-        </div>
-        <div class="radio-btn-container">
-          <input class="radio-btn" type="radio" id="two" name="rating" value="2">
-          <label class="label-btn" for="two">2</label>
-        </div>
-        <div class="radio-btn-container">
-          <input class="radio-btn" type="radio" id="three" name="rating" value="3">
-          <label class="label-btn" for="three">3</label>
-        </div>
-        <div class="radio-btn-container">
-          <input class="radio-btn" type="radio" id="four" name="rating" value="4">
-          <label class="label-btn" for="four">4</label>
-        </div>
-        <div class="radio-btn-container">
-          <input class="radio-btn" type="radio" id="five" name="rating" value="5">
-          <label class="label-btn" for="five">5</label>
-        </div>
+  <hr>
+  <div class="ui-question">
+    <h2>B. Please give us your opinions on Walmart's user interface by answering the following questions:</h2>
+    <p>1. On a scale of 1 to 5, please rate the usability of the website: </p>
+    <div style="display: flex; flex-direction: row">
+      <div class="radio-btn-container">
+        <input class="radio-btn" type="radio" id="one" name="rating" value="1">
+        <label class="label-btn" for="one">1</label>
       </div>
-      <p> 2. Among these features, which ones do you use the most? </p>
+      <div class="radio-btn-container">
+        <input class="radio-btn" type="radio" id="two" name="rating" value="2">
+        <label class="label-btn" for="two">2</label>
+      </div>
+      <div class="radio-btn-container">
+        <input class="radio-btn" type="radio" id="three" name="rating" value="3">
+        <label class="label-btn" for="three">3</label>
+      </div>
+      <div class="radio-btn-container">
+        <input class="radio-btn" type="radio" id="four" name="rating" value="4">
+        <label class="label-btn" for="four">4</label>
+      </div>
+      <div class="radio-btn-container">
+        <input class="radio-btn" type="radio" id="five" name="rating" value="5">
+        <label class="label-btn" for="five">5</label>
+      </div>
+    </div>
+    <p> 2. Among these features, which ones do you use the most? </p>
+    <div class="option-container">
       <input type="checkbox" class="selection-btn" value="Sort and filter">
-      <label for="vehicle1"> Sort and filter </label><br>
-      <input type="checkbox" class="selection-btn" value="Flyers">
-      <label for="vehicle2"> Flyers </label><br>
-      <input type="checkbox" class="selection-btn" value="Store Finder">
-      <label for="vehicle3"> Store Finder </label><br>
-      <input type="checkbox" class="selection-btn" value="Digital Services">
-      <label for="vehicle3"> Digital Services </label><br>
-      <input type="checkbox" class="selection-btn" value="Trending in your area">
-      <label for="vehicle3"> Trending in your area </label><br>
-      </p>
-
-      <p> 3. What do you shop for the most? </p>
-      <input type="checkbox" class="selection-btn" value="Fruits and Vegetables">
-      <label for="vehicle1"> Fruits and vegetables </label>
-      <span class="checkmark"></span>
-      <br>
-      <input type="checkbox" class="selection-btn" value="Dairy and Eggs">
-      <label for="vehicle2"> Dairy and Eggs </label><br>
-      <input type="checkbox" class="selection-btn" value="Bread and Bakery">
-      <label for="vehicle3"> Bread and Bakery </label><br>
-      <input type="checkbox" class="selection-btn" value="Meat and Seafood">
-      <label for="vehicle3"> Meat and Seafood </label><br>
-      <input type="checkbox" class="selection-btn" value="Chips and Snacks">
-      <label for="vehicle3"> Chips and Snacks </label><br>
-      <input type="checkbox" class="selection-btn" value="Medicine and Drugs">
-      <label for="vehicle3"> Medicine and Drugs </label><br>
-      <input type="checkbox" class="selection-btn" value="Other">
-      <label for="vehicle3"> Other </label><br>
-      </p>
-
-      <p> 4. How do you usually do your shopping? </p>
-      <input type="checkbox" id="choice1" class="selection-btn" value="In person">
-      <label for="choice1"> In person </label><br>
-      <input type="checkbox" id="choice2" class="selection-btn" value="Online pickup">
-      <label for="choice2"> Online pickup </label><br>
-      <input type="checkbox" id="choice3" class="selection-btn" value="Online delivery">
-      <label for="choice3"> Online delivery </label><br>
-      <input type="checkbox" id="choice4" class="selection-btn" value="Other">
-      <label for="choice4"> Other </label><br>
-      </p>
-
-      <p>
-        <label for="fname">5. Any improvements/comments?</label>
-      <div>
-        <textarea class="comments" id="imp" name="imp" rows="4" cols="75" placeholder="Enter your comments"></textarea>
-      </div>
-      </p>
+      <label for="vehicle1"> Sort and filter </label>
     </div>
-    <br>
-    <div></div>
-    <button id="submitButton" type="button" class="block">
-      SUBMIT
-    </button>
-    <p id="signature">Website designed by Amar Ghazi, Celine Wan Min Kee, Kanjanokphat Kitisunawakul & Selin Kararmaz
+    <div class="option-container">
+      <input type="checkbox" class="selection-btn" value="Flyers">
+      <label for="vehicle2"> Flyers </label>
+    </div>
+    <div class="option-container">
+      <input type="checkbox" class="selection-btn" value="Store Finder">
+      <label for="vehicle3"> Store Finder </label>
+    </div>
+    <div class="option-container">
+      <input type="checkbox" class="selection-btn" value="Digital Services">
+      <label for="vehicle3"> Digital Services </label>
+    </div>
+    <div class="option-container">
+      <input type="checkbox" class="selection-btn" value="Trending in your area">
+      <label for="vehicle3"> Trending in your area </label>
+    </div>
     </p>
 
-    <div id="popupContainer" class="popup-container">
-      <div id="popupContent" class="popup-content">
-        <span class="close-btn" onclick="closePopup()">X</span>
-        <h2>Thank you for submitting! Your feedback is valuable to us.</h2>
-      </div>
+    <p> 3. What do you shop for the most? </p>
+    <div class="option-container">
+      <input type="checkbox" class="selection-btn" value="Fruits and Vegetables">
+      <label for="vehicle1"> Fruits and vegetables </label>
     </div>
+    <div class="option-container">
+      <input type="checkbox" class="selection-btn" value="Dairy and Eggs">
+      <label for="vehicle2"> Dairy and Eggs </label>
+    </div>
+    <div class="option-container">
+      <input type="checkbox" class="selection-btn" value="Bread and Bakery">
+      <label for="vehicle3"> Bread and Bakery </label>
+    </div>
+    <div class="option-container">
+      <input type="checkbox" class="selection-btn" value="Meat and Seafood">
+      <label for="vehicle3"> Meat and Seafood </label>
+    </div>
+    <div class="option-container">
+      <input type="checkbox" class="selection-btn" value="Chips and Snacks">
+      <label for="vehicle3"> Chips and Snacks </label>
+    </div>
+    <div class="option-container">
+      <input type="checkbox" class="selection-btn" value="Medicine and Drugs">
+      <label for="vehicle3"> Medicine and Drugs </label>
+    </div>
+    <div class="option-container">
+      <input type="checkbox" class="selection-btn" value="Other">
+      <label for="vehicle3"> Other </label>
+    </div>
+    </p>
 
+    <p> 4. How do you usually do your shopping? </p>
+    <div class="option-container">
+      <input type="checkbox" id="choice1" class="selection-btn" value="In person">
+      <label for="choice1"> In person </label>
+    </div>
+    <div class="option-container">
+      <input type="checkbox" id="choice2" class="selection-btn" value="Online pickup">
+      <label for="choice2"> Online pickup </label>
+    </div>
+    <div class="option-container">
+      <input type="checkbox" id="choice3" class="selection-btn" value="Online delivery">
+      <label for="choice3"> Online delivery </label>
+    </div>
+    <div class="option-container">
+      <input type="checkbox" id="choice4" class="selection-btn" value="Other">
+      <label for="choice4"> Other </label>
+    </div>
+    </p>
+
+    <p>
+      <label for="fname">5. Any improvements/comments?</label>
+    <div>
+      <textarea class="comments" id="imp" name="imp" rows="4" cols="75" placeholder="Enter your comments"
+        style="margin-left: 18px; font-size: 16px;"></textarea>
+    </div>
+    </p>
+  </div>
+  <br>
+  <div></div>
+  <button id="submitButton" type="button" class="block">
+    SUBMIT
+  </button>
+  <p id="signature">Website designed by Amar Ghazi, Celine Wan Min Kee, Kanjanokphat Kitisunawakul & Selin Kararmaz
+  </p>
+
+  <div id="popupContainer" class="popup-container">
+    <div id="popupContent" class="popup-content">
+      <span class="close-btn" onclick="closePopup()">X</span>
+      <h2>Thank you for submitting! Your feedback is valuable to us.</h2>
+    </div>
+  </div>
+  <script src="scripts/carousel.js"></script>
 </body>
 
 </html>
