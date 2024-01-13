@@ -13,6 +13,7 @@ body {
 
 a {
   color: white;
+  transition: color 0.2s ease-in-out;
 }
 
 a:hover {
@@ -58,19 +59,19 @@ h2 {
 .radio-btn {
   width: 20px;
   height: 20px;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .radio-btn:hover {
-  transform: scale(1.4); 
+  transform: scale(1.4);
 }
 
-.selection-btn{
-  transition: transform 0.3s ease; 
+.selection-btn {
+  transition: transform 0.3s ease;
 }
 
 .selection-btn:hover {
-  transform: scale(1.4); 
+  transform: scale(1.4);
 }
 
 .label-btn {
@@ -98,25 +99,24 @@ h2 {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin: 20px auto;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 #submitButton:hover {
   background-color: #cccccc;
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 input[type="checkbox"] {
-  accent-color:  red;
+  accent-color: red;
 }
 input[type="radio"] {
-  accent-color:  red;
+  accent-color: red;
 }
 .block {
   display: block;
   margin-top: 20px;
 }
 
-/* Add this to your existing CSS or in a new style block */
 .popup-container {
   display: none;
   position: fixed;
@@ -128,6 +128,16 @@ input[type="radio"] {
   align-items: center;
   justify-content: center;
   color: white;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .popup-content {
@@ -136,8 +146,10 @@ input[type="radio"] {
   padding: 20px;
   border-radius: 5px;
   text-align: center;
+  background: rgba(255, 255, 255, 0.384);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.384);
 }
-
 
 .close-btn {
   position: absolute;
@@ -145,7 +157,8 @@ input[type="radio"] {
   right: 10px;
   font-size: 20px;
   cursor: pointer;
-  color: #aaa;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 5px;
+  border: none;
 }
-
-
