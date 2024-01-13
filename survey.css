@@ -70,6 +70,8 @@ h2 {
 }
 
 .selection-btn {
+  height: 15px;
+  width: 15px;
   transition: transform 0.3s ease;
 }
 
@@ -227,5 +229,5 @@ input[type="radio"] {
 }
 
 .option-container {
-  margin: 0px 0px 10px 15px
+  margin: 0px 0px 10px 15px;
 }
